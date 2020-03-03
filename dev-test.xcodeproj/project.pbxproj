@@ -17,6 +17,9 @@
 		7B41A52E240C939C00F54EAF /* dev_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41A52D240C939C00F54EAF /* dev_testTests.swift */; };
 		7B41A539240C939C00F54EAF /* dev_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41A538240C939C00F54EAF /* dev_testUITests.swift */; };
 		7B5F9BB8240E12B8001FB8E0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F9BB7240E12B8001FB8E0 /* R.generated.swift */; };
+		7B5F9BBE240E8055001FB8E0 /* MXSegmentedControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F9BBD240E8055001FB8E0 /* MXSegmentedControl.framework */; };
+		7B5F9BC2240E8063001FB8E0 /* MXParallaxHeader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F9BC1240E8063001FB8E0 /* MXParallaxHeader.framework */; };
+		7B5F9BC5240E8076001FB8E0 /* MXPagerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F9BC4240E8076001FB8E0 /* MXPagerView.framework */; };
 		963D75348A04E377BF27FC32 /* Pods_dev_test_dev_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCA3FA3C713A2D838CF6141 /* Pods_dev_test_dev_testUITests.framework */; };
 		B3091D3343DDBE29A63AD186 /* Pods_dev_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74209B5083FFCDEE9B9B0C43 /* Pods_dev_testTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,10 @@
 		7B41A538240C939C00F54EAF /* dev_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dev_testUITests.swift; sourceTree = "<group>"; };
 		7B41A53A240C939C00F54EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B5F9BB7240E12B8001FB8E0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		7B5F9BB9240E7DC1001FB8E0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		7B5F9BBD240E8055001FB8E0 /* MXSegmentedControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MXSegmentedControl.framework; path = Carthage/Build/iOS/MXSegmentedControl.framework; sourceTree = "<group>"; };
+		7B5F9BC1240E8063001FB8E0 /* MXParallaxHeader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MXParallaxHeader.framework; path = Carthage/Build/iOS/MXParallaxHeader.framework; sourceTree = "<group>"; };
+		7B5F9BC4240E8076001FB8E0 /* MXPagerView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MXPagerView.framework; path = Carthage/Build/iOS/MXPagerView.framework; sourceTree = "<group>"; };
 		85403D95EE233B82BE0C0217 /* Pods-dev-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev-test.debug.xcconfig"; path = "Target Support Files/Pods-dev-test/Pods-dev-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5F9BC5240E8076001FB8E0 /* MXPagerView.framework in Frameworks */,
+				7B5F9BBE240E8055001FB8E0 /* MXSegmentedControl.framework in Frameworks */,
+				7B5F9BC2240E8063001FB8E0 /* MXParallaxHeader.framework in Frameworks */,
 				52D19EC21CA7C6B7E4FDF1F1 /* Pods_dev_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +119,10 @@
 		42682B1B26771502AA46EEE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B5F9BC4240E8076001FB8E0 /* MXPagerView.framework */,
+				7B5F9BC1240E8063001FB8E0 /* MXParallaxHeader.framework */,
+				7B5F9BBD240E8055001FB8E0 /* MXSegmentedControl.framework */,
+				7B5F9BB9240E7DC1001FB8E0 /* Alamofire.framework */,
 				4F5A104F546637E22F8ED9EF /* Pods_dev_test.framework */,
 				1CCA3FA3C713A2D838CF6141 /* Pods_dev_test_dev_testUITests.framework */,
 				74209B5083FFCDEE9B9B0C43 /* Pods_dev_testTests.framework */,
@@ -186,6 +200,7 @@
 				7B6916E8240DEAEB00BED248 /* SwiftFormat */,
 				7B41A546240C9F0D00F54EAF /* SwiftLint */,
 				6102DEEECDE4587C88EA7EB5 /* [CP] Embed Pods Frameworks */,
+				7B5F9BC7240E809F001FB8E0 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -399,6 +414,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		7B5F9BC7240E809F001FB8E0 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/MXPagerView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MXSegmentedControl.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MXParallaxHeader.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		7B6916E8240DEAEB00BED248 /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -648,6 +684,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "dev-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,6 +707,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "dev-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
