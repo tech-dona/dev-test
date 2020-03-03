@@ -179,6 +179,7 @@
 				7B41A50F240C939B00F54EAF /* Sources */,
 				7B41A510240C939B00F54EAF /* Frameworks */,
 				7B41A511240C939B00F54EAF /* Resources */,
+				7B6916E8240DEAEB00BED248 /* SwiftFormat */,
 				7B41A546240C9F0D00F54EAF /* SwiftLint */,
 			);
 			buildRules = (
@@ -338,6 +339,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  git diff --name-only | grep .swift | while read filename; do\n    swiftlint --path \"$filename\"\n  done\nelse\n  echo \"SwiftLint does not exist, download from <https://github.com/realm/SwiftLint>\"\nfi\n";
+		};
+		7B6916E8240DEAEB00BED248 /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\"\n";
 		};
 		D71B0213B4073514695617E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
