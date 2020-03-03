@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		7B41A523240C939C00F54EAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B41A521240C939C00F54EAF /* LaunchScreen.storyboard */; };
 		7B41A52E240C939C00F54EAF /* dev_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41A52D240C939C00F54EAF /* dev_testTests.swift */; };
 		7B41A539240C939C00F54EAF /* dev_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41A538240C939C00F54EAF /* dev_testUITests.swift */; };
+		7B5F9BB8240E12B8001FB8E0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F9BB7240E12B8001FB8E0 /* R.generated.swift */; };
 		963D75348A04E377BF27FC32 /* Pods_dev_test_dev_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCA3FA3C713A2D838CF6141 /* Pods_dev_test_dev_testUITests.framework */; };
 		B3091D3343DDBE29A63AD186 /* Pods_dev_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74209B5083FFCDEE9B9B0C43 /* Pods_dev_testTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		7B41A534240C939C00F54EAF /* dev-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dev-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B41A538240C939C00F54EAF /* dev_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dev_testUITests.swift; sourceTree = "<group>"; };
 		7B41A53A240C939C00F54EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B5F9BB7240E12B8001FB8E0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		85403D95EE233B82BE0C0217 /* Pods-dev-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev-test.debug.xcconfig"; path = "Target Support Files/Pods-dev-test/Pods-dev-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 		7B41A515240C939B00F54EAF /* dev-test */ = {
 			isa = PBXGroup;
 			children = (
+				7B5F9BB7240E12B8001FB8E0 /* R.generated.swift */,
 				7B41A516240C939B00F54EAF /* AppDelegate.swift */,
 				7B41A518240C939B00F54EAF /* SceneDelegate.swift */,
 				7B41A51A240C939B00F54EAF /* ViewController.swift */,
@@ -176,11 +179,13 @@
 			buildConfigurationList = 7B41A53D240C939C00F54EAF /* Build configuration list for PBXNativeTarget "dev-test" */;
 			buildPhases = (
 				EADAA443E3A4EE81CCE36C70 /* [CP] Check Pods Manifest.lock */,
+				7B5F9BB6240E119C001FB8E0 /* R.swift */,
 				7B41A50F240C939B00F54EAF /* Sources */,
 				7B41A510240C939B00F54EAF /* Frameworks */,
 				7B41A511240C939B00F54EAF /* Resources */,
 				7B6916E8240DEAEB00BED248 /* SwiftFormat */,
 				7B41A546240C9F0D00F54EAF /* SwiftLint */,
+				6102DEEECDE4587C88EA7EB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +223,7 @@
 				7B41A530240C939C00F54EAF /* Sources */,
 				7B41A531240C939C00F54EAF /* Frameworks */,
 				7B41A532240C939C00F54EAF /* Resources */,
+				69BA19EF5B0AE9781D5A925B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,6 +328,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6102DEEECDE4587C88EA7EB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dev-test/Pods-dev-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dev-test/Pods-dev-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dev-test/Pods-dev-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69BA19EF5B0AE9781D5A925B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dev-test-dev-testUITests/Pods-dev-test-dev-testUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dev-test-dev-testUITests/Pods-dev-test-dev-testUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dev-test-dev-testUITests/Pods-dev-test-dev-testUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7B41A546240C9F0D00F54EAF /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +379,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  git diff --name-only | grep .swift | while read filename; do\n    swiftlint --path \"$filename\"\n  done\nelse\n  echo \"SwiftLint does not exist, download from <https://github.com/realm/SwiftLint>\"\nfi\n";
+		};
+		7B5F9BB6240E119C001FB8E0 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		7B6916E8240DEAEB00BED248 /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -412,6 +472,7 @@
 				7B41A51B240C939B00F54EAF /* ViewController.swift in Sources */,
 				7B41A517240C939B00F54EAF /* AppDelegate.swift in Sources */,
 				7B41A519240C939B00F54EAF /* SceneDelegate.swift in Sources */,
+				7B5F9BB8240E12B8001FB8E0 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

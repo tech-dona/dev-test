@@ -8,6 +8,7 @@ target 'dev-test' do
   # Pods for dev-test
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
+  pod 'R.swift'
 
   target 'dev-testTests' do
     inherit! :search_paths
