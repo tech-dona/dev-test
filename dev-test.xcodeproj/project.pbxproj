@@ -17,9 +17,7 @@
 		7B41A52E240C939C00F54EAF /* dev_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41A52D240C939C00F54EAF /* dev_testTests.swift */; };
 		7B41A539240C939C00F54EAF /* dev_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41A538240C939C00F54EAF /* dev_testUITests.swift */; };
 		7B5F9BB8240E12B8001FB8E0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F9BB7240E12B8001FB8E0 /* R.generated.swift */; };
-		7B5F9BBE240E8055001FB8E0 /* MXSegmentedControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F9BBD240E8055001FB8E0 /* MXSegmentedControl.framework */; };
-		7B5F9BC2240E8063001FB8E0 /* MXParallaxHeader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F9BC1240E8063001FB8E0 /* MXParallaxHeader.framework */; };
-		7B5F9BC5240E8076001FB8E0 /* MXPagerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F9BC4240E8076001FB8E0 /* MXPagerView.framework */; };
+		7B5F9BC9240F202F001FB8E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F9BC8240F202F001FB8E0 /* SecondViewController.swift */; };
 		963D75348A04E377BF27FC32 /* Pods_dev_test_dev_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCA3FA3C713A2D838CF6141 /* Pods_dev_test_dev_testUITests.framework */; };
 		B3091D3343DDBE29A63AD186 /* Pods_dev_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74209B5083FFCDEE9B9B0C43 /* Pods_dev_testTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +67,7 @@
 		7B5F9BBD240E8055001FB8E0 /* MXSegmentedControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MXSegmentedControl.framework; path = Carthage/Build/iOS/MXSegmentedControl.framework; sourceTree = "<group>"; };
 		7B5F9BC1240E8063001FB8E0 /* MXParallaxHeader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MXParallaxHeader.framework; path = Carthage/Build/iOS/MXParallaxHeader.framework; sourceTree = "<group>"; };
 		7B5F9BC4240E8076001FB8E0 /* MXPagerView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MXPagerView.framework; path = Carthage/Build/iOS/MXPagerView.framework; sourceTree = "<group>"; };
+		7B5F9BC8240F202F001FB8E0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		85403D95EE233B82BE0C0217 /* Pods-dev-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev-test.debug.xcconfig"; path = "Target Support Files/Pods-dev-test/Pods-dev-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,9 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B5F9BC5240E8076001FB8E0 /* MXPagerView.framework in Frameworks */,
-				7B5F9BBE240E8055001FB8E0 /* MXSegmentedControl.framework in Frameworks */,
-				7B5F9BC2240E8063001FB8E0 /* MXParallaxHeader.framework in Frameworks */,
 				52D19EC21CA7C6B7E4FDF1F1 /* Pods_dev_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +156,7 @@
 				7B41A518240C939B00F54EAF /* SceneDelegate.swift */,
 				7B41A51A240C939B00F54EAF /* ViewController.swift */,
 				7B41A51C240C939B00F54EAF /* Main.storyboard */,
+				7B5F9BC8240F202F001FB8E0 /* SecondViewController.swift */,
 				7B41A51F240C939C00F54EAF /* Assets.xcassets */,
 				7B41A521240C939C00F54EAF /* LaunchScreen.storyboard */,
 				7B41A524240C939C00F54EAF /* Info.plist */,
@@ -417,22 +414,19 @@
 		};
 		7B5F9BC7240E809F001FB8E0 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/MXPagerView.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MXSegmentedControl.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MXParallaxHeader.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
@@ -508,6 +502,7 @@
 				7B41A51B240C939B00F54EAF /* ViewController.swift in Sources */,
 				7B41A517240C939B00F54EAF /* AppDelegate.swift in Sources */,
 				7B41A519240C939B00F54EAF /* SceneDelegate.swift in Sources */,
+				7B5F9BC9240F202F001FB8E0 /* SecondViewController.swift in Sources */,
 				7B5F9BB8240E12B8001FB8E0 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
