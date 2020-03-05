@@ -6,8 +6,8 @@
 //  Copyright © 2020 lalala. All rights reserved.
 //
 
-import UIKit
 import MXSegmentedControl
+import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet private var segmentedControl: MXSegmentedControl!
