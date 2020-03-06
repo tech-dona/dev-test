@@ -6,17 +6,19 @@
 //  Copyright © 2020 lalala. All rights reserved.
 //
 
+import Alamofire
 import UIKit
 
 class QiitaAllListViewController: UIViewController {
-    @IBOutlet var qiitaAllListTable: UITableView!
+    @IBOutlet private var qiitaAllListTable: UITableView!
+
     var presenter: QiitaAllListPresentetation!
+
+    private var articles: [Article] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("aaa")
-        
         presenter.viewDidLoad()
 
         qiitaAllListTable.estimatedRowHeight = 60
@@ -32,17 +34,22 @@ extension QiitaAllListViewController: UITableViewDelegate {
 
 extension QiitaAllListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return articles.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QiitaCell", for: indexPath)
 
-        cell.textLabel?.text = "aaaa"
-        cell.detailTextLabel?.text = "bbb\nccccc"
+        cell.textLabel?.text = articles[indexPath.row].title
+        cell.detailTextLabel?.text = articles[indexPath.row].user.id.description
 
         return cell
     }
 }
 
-extension QiitaAllListViewController: QiitaAllListView {}
+extension QiitaAllListViewController: QiitaAllListView {
+    func setQiitaAllList(_ articles: [Article]) {
+        self.articles = articles
+        qiitaAllListTable.reloadData()
+    }
+}

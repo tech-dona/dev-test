@@ -13,18 +13,31 @@ protocol QiitaAllListPresentetation: AnyObject {
     func didSelectRow(at indexPath: IndexPath)
 }
 
-protocol QiitaAllListView: AnyObject {}
+protocol QiitaAllListView: AnyObject {
+    func setQiitaAllList(_ articles: [Article])
+}
 
 final class QiitaAllListPresenter: QiitaAllListPresentetation {
     private weak var view: QiitaAllListView?
     private let router: QiitaAllListWireframe
+    private let interactor: QiitaAllListInteractorInterface
 
-    init(view: QiitaAllListView, router: QiitaAllListWireframe) {
+    init(view: QiitaAllListView, interactor: QiitaAllListInteractorInterface, router: QiitaAllListWireframe) {
         self.view = view
+        self.interactor = interactor
         self.router = router
     }
 
-    func viewDidLoad() {}
+    func viewDidLoad() {
+        interactor.fetchAllList(keyword: "") { articles in
+            switch articles {
+            case let .success(articles):
+                self.view?.setQiitaAllList(articles)
+            case .failure:
+                break
+            }
+        }
+    }
 
     func didSelectRow(at indexPath: IndexPath) {
         router.showDetailArticle()

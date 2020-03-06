@@ -24,8 +24,9 @@ class QiitaAllListRouter: QiitaAllListWireframe {
     static func assembleModule() -> UIViewController {
         let view = R.storyboard.qiitaAllList().instantiateInitialViewController() as! QiitaAllListViewController
         let router = QiitaAllListRouter(viewController: view)
+        let interactor = QiitaAllListInteractor()
 
-        let presenter = QiitaAllListPresenter(view: view, router: router)
+        let presenter = QiitaAllListPresenter(view: view, interactor: interactor, router: router)
 
         view.presenter = presenter
 
@@ -33,11 +34,6 @@ class QiitaAllListRouter: QiitaAllListWireframe {
     }
 
     func showDetailArticle() {
-        print(#function)
         viewController?.performSegue(withIdentifier: "toQiitaDetailArticle", sender: "")
-//        let navview = R.storyboard.qiitaDetailArticle().instantiateInitialViewController() as! UINavigationController
-//        let view = navview.topViewController as! QiitaDetailArticleViewController
-//        viewController?.navigationController?.pushViewController(view, animated: true)
-//        viewController?.present(view, animated: true, completion: nil)
     }
 }
