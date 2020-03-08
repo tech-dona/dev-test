@@ -10,6 +10,7 @@ target 'dev-test' do
   pod 'SwiftFormat/CLI'
   pod 'R.swift'
   pod 'MXSegmentedControl'
+  pod 'LicensePlist'
 
   target 'dev-testTests' do
     inherit! :search_paths

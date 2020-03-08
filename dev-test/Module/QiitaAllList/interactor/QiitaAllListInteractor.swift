@@ -24,7 +24,6 @@ final class QiitaAllListInteractor {
 extension QiitaAllListInteractor: QiitaAllListInteractorInterface {
     func fetchAllList(keyword: String = "", completion: @escaping (Result<[Article], Error>) -> Void) {
         qiitaAPI.perform(keyword: keyword) { result in
-            print(result)
             switch result {
             case let .success(articles):
                 completion(.success(articles))

@@ -11,7 +11,7 @@ import UIKit
 protocol QiitaAllListWireframe {
     var viewController: UIViewController? { get set }
 
-    func showDetailArticle()
+    func showDetailArticle(_ article: Article)
 }
 
 class QiitaAllListRouter: QiitaAllListWireframe {
@@ -33,7 +33,10 @@ class QiitaAllListRouter: QiitaAllListWireframe {
         return view
     }
 
-    func showDetailArticle() {
-        viewController?.performSegue(withIdentifier: "toQiitaDetailArticle", sender: "")
+    func showDetailArticle(_ article: Article) {
+        let detailArticleVC = QiitaDetailArticleRouter.assembleModules(article: article) as! QiitaDetailArticleViewController
+
+        viewController?.present(detailArticleVC, animated: true, completion: nil)
+
     }
 }

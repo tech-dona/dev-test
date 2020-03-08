@@ -22,6 +22,8 @@ final class QiitaAllListPresenter: QiitaAllListPresentetation {
     private let router: QiitaAllListWireframe
     private let interactor: QiitaAllListInteractorInterface
 
+    private var articles: [Article] = []
+
     init(view: QiitaAllListView, interactor: QiitaAllListInteractorInterface, router: QiitaAllListWireframe) {
         self.view = view
         self.interactor = interactor
@@ -32,6 +34,7 @@ final class QiitaAllListPresenter: QiitaAllListPresentetation {
         interactor.fetchAllList(keyword: "") { articles in
             switch articles {
             case let .success(articles):
+                self.articles = articles
                 self.view?.setQiitaAllList(articles)
             case .failure:
                 break
@@ -40,6 +43,10 @@ final class QiitaAllListPresenter: QiitaAllListPresentetation {
     }
 
     func didSelectRow(at indexPath: IndexPath) {
-        router.showDetailArticle()
+        print(#function)
+        guard indexPath.row < articles.count else { return }
+
+        let article = articles[indexPath.row]
+        router.showDetailArticle(article)
     }
 }

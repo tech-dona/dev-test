@@ -1,4 +1,5 @@
 PODS:
+  - LicensePlist (2.13.0)
   - MXSegmentedControl (1.1.0)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
@@ -7,6 +8,7 @@ PODS:
   - SwiftLint (0.37.0)
 
 DEPENDENCIES:
+  - LicensePlist
   - MXSegmentedControl
   - R.swift
   - SwiftFormat/CLI
@@ -14,6 +16,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - LicensePlist
     - MXSegmentedControl
     - R.swift
     - R.swift.Library
@@ -21,12 +24,13 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
+  LicensePlist: a5395002c74b45c38bb8661374f5608534f0f5a7
   MXSegmentedControl: f39e46199a52cbc03b1c845e150215119f2542f5
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   SwiftFormat: 8b3c6b69454305a61c221355095f62dacc0811bf
   SwiftLint: c078a14d7d7ade75e5507795d185e3da41d844d2
 
-PODFILE CHECKSUM: c4244321d7ee06c11ba9f88d19c229386c17bad6
+PODFILE CHECKSUM: 6bb70ea2cf7484eaae87cffc1fb0f0851d8f899d
 
 COCOAPODS: 1.8.4

@@ -7,12 +7,17 @@
 //
 
 import Alamofire
+import SDWebImage
+import SkeletonView
 import UIKit
 
 class QiitaAllListViewController: UIViewController {
     @IBOutlet private var qiitaAllListTable: UITableView!
 
     var presenter: QiitaAllListPresentetation!
+
+    // キャッシュがない場合の画像
+    let emptyImage = UIImage()
 
     private var articles: [Article] = []
 
@@ -43,6 +48,14 @@ extension QiitaAllListViewController: UITableViewDataSource {
         cell.textLabel?.text = articles[indexPath.row].title
         cell.detailTextLabel?.text = articles[indexPath.row].user.id.description
 
+        cell.imageView?.showAnimatedSkeleton()
+
+        cell.imageView?.sd_setImage(with: URL(string: articles[indexPath.row].user.iconUrl)) { [weak self] _, _, _, _ in
+
+            cell.imageView?.hideSkeleton()
+            cell.setNeedsLayout()
+        }
+
         return cell
     }
 }
@@ -51,5 +64,20 @@ extension QiitaAllListViewController: QiitaAllListView {
     func setQiitaAllList(_ articles: [Article]) {
         self.articles = articles
         qiitaAllListTable.reloadData()
+    }
+}
+
+// 文字列からURLを生成
+extension UIImage {
+    public convenience init(url: String) {
+        let url = URL(string: url)
+        do {
+            let data = try Data(contentsOf: url!)
+            self.init(data: data)!
+            return
+        } catch let err {
+            print("Error : \(err.localizedDescription)")
+        }
+        self.init()
     }
 }
