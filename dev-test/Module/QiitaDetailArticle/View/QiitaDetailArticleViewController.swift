@@ -31,7 +31,6 @@ class QiitaDetailArticleViewController: UIViewController {
 extension QiitaDetailArticleViewController: QiitaDetailArticleView {
     func show(article: Article) {
         if let url = URL(string: article.url) {
-            print("読み込み")
             webView.load(URLRequest(url: url))
         }
     }

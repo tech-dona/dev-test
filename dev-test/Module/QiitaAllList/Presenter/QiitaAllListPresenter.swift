@@ -43,7 +43,6 @@ final class QiitaAllListPresenter: QiitaAllListPresentetation {
     }
 
     func didSelectRow(at indexPath: IndexPath) {
-        print(#function)
         guard indexPath.row < articles.count else { return }
 
         let article = articles[indexPath.row]
