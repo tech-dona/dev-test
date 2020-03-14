@@ -3,13 +3,15 @@ excluded:
   - Carthage/
   - dev-testTests/
   - dev-testUITests/
+
+#デフォルト無効のルールのうち、有効にするもの。
 opt_in_rules:
-  - anyobject_protocol
-  - array_init
-  - attributes
-  - closure_end_indentation
-  - closure_spacing
-  - collection_alignment
+  - anyobject_protocol #Classのみのプロトコルでは、classよりもAnyObjectを使用することをお勧めします
+  - array_init #sequenceからArrayへの変換をする際に、seq.map { $0 }ではなくArray(seq)を使用する方が望ましいというもの。
+  - attributes # @objcや@IBOutletなどの属性(attributes)はvarやimportに対するものの場合は同じ行に配置し、型や関数に対するものの場合は別の行に配置すべきというもの。
+  - closure_end_indentation # クロージャーの最後の閉じ括弧はクロージャーの先頭の行のインデントに揃えるべきというもの。
+  - closure_spacing # クロージャーの式を記述する際に、中括弧の中の始まりと終わりの部分に１つだけスペースを入れるべきというもの。
+  - collection_alignment # コレクションリテラルのすべての要素は、垂直方向に配置する必要があります
   - contains_over_filter_count
   - contains_over_filter_is_empty
   - contains_over_first_not_nil

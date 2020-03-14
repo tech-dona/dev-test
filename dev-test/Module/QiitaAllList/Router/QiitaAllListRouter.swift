@@ -37,6 +37,5 @@ class QiitaAllListRouter: QiitaAllListWireframe {
         let detailArticleVC = QiitaDetailArticleRouter.assembleModules(article: article) as! QiitaDetailArticleViewController
 
         viewController?.present(detailArticleVC, animated: true, completion: nil)
-
     }
 }
